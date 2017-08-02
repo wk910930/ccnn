@@ -1,1 +1,1 @@
-# ccnn
+# Chained Cascade Network for Object Detection
