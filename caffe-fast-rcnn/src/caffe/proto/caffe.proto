@@ -461,6 +461,21 @@ message LossParameter {
   // is not specified, then setting this to false will be equivalent to
   // normalization = BATCH_SIZE to be consistent with previous behavior.
   optional bool normalize = 2;
+  optional bool hard_mining = 3 [default = false];
+  optional bool sampling = 4 [default = false];
+  optional bool cascade = 5 [default = false];
+  optional int32 bp_size = 6 [default = 0]; // 128, 256
+  optional int32 batch_size = 7;
+  optional int32 gt_batch_size = 8;
+  optional int32 ims_per_batch = 9;
+  optional int32 gt_per_batch = 10;
+  optional float fg_fraction = 11;
+  optional float cascade_type = 12 [default = 0]; //0 for sorted cascade, 1 for score cascade
+  optional float threshold = 13 [default = 0.99]; // threshold for cascade
+  optional float rand_ratio = 14 [default = 0];
+  optional float keep_ratio = 15 [default = 0.1];
+  optional bool rand_pos = 16 [default = false];
+  optional float nms_threshold = 17 [default = 0];
 }
 
 // Messages that store parameters used by individual layer types follow, in
