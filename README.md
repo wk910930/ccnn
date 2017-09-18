@@ -1,4 +1,4 @@
-# Chained Cascade Network for Object Detection
+# Learning Chained Deep Features and Classifiers for Cascade in Object Detection
 
 by Wanli Ouyang, Kun Wang, Xin Zhu and Xiaogang Wang.
 
