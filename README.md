@@ -1,5 +1,7 @@
 # Chained Cascade Network for Object Detection
 
+## Method
+
 <p align="center">
 <img src="figure1.png" alt="Motivation">
 </p>
