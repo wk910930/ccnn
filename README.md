@@ -18,6 +18,35 @@ performance on benchmarks like PASCAL VOC 2007 and ImageNet. Combined with bette
 <img src="figure1.png" alt="Motivation">
 </p>
 
+## Cascade Loss
+
+```
+layer {
+  name: "loss_cls_cas_128"
+  type: "SoftmaxWithCascadeLoss"
+  bottom: "cls_score_cas_128"
+  bottom: "labels"
+  bottom: "bp_map_cas_128"
+  top: "loss_cls_cas_128"
+  top: "bp_map_cas_64"
+  loss_weight: 1
+  loss_weight: 0
+  loss_param {
+    hard_mining: true
+    sampling: true
+    cascade: true
+    bp_size: 64
+    cascade_type: 1
+    threshold: 0.9
+    batch_size: 60
+    gt_batch_size: 2
+    ims_per_batch: 1
+    gt_per_batch: 2
+    fg_fraction: 0.25
+  }
+}
+```
+
 ### Citation
 
 If you find the code or the models useful, please cite this paper:
