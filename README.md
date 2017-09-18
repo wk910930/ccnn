@@ -1,12 +1,6 @@
 # Chained Cascade Network for Object Detection
 
-## Method
-
-<p align="center">
-<img src="figure1.png" alt="Motivation">
-</p>
-
-by Wanli Ouyang, Kun Wang, Xin Zhu and Xiaogang Wang
+by Wanli Ouyang, Kun Wang, Xin Zhu and Xiaogang Wang.
 
 ## Introduction
 
@@ -17,6 +11,12 @@ multiple stages are jointly learned in an end-to-end network. In this way, featu
 more difficult samples with the help of features and classifiers in previous stages. It yields consistent boost in detection
 performance on benchmarks like PASCAL VOC 2007 and ImageNet. Combined with better region proposal, CC-Net leads to state-of-the-art result of 81.1% mAP on PASCAL VOC2007. For more details, please refer to our
 [arXiv paper](http://arxiv.org/abs/1702.07054).
+
+## Method
+
+<p align="center">
+<img src="figure1.png" alt="Motivation">
+</p>
 
 ### Citation
 
