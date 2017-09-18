@@ -1,0 +1,16 @@
+TEST:
+  SCALES: !!python/tuple [720,]
+  MAX_SIZE: 1280
+  HAS_RPN: True
+  RPN_NMS_THRESH: 0.7
+  RPN_MIN_SIZE: 32
+  NMS: 0.3
+
+USE_GPU_NMS: False
+EXP_DIR: sensenets
+# The mapping from image coordinates to feature map coordinates might cause
+# some boxes that are distinct in image space to become identical in feature
+# coordinates. If DEDUP_BOXES > 0, then DEDUP_BOXES is used as the scale factor
+# for identifying duplicate boxes.
+# 1/16 is correct for {Alex,Caffe}Net, VGG_CNN_M_1024, and VGG16
+DEDUP_BOXES: 0.0
